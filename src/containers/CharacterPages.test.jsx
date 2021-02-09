@@ -5,5 +5,7 @@ import CharacterPage from './CharacterPages';
 describe('CharacterPages container', () => {
   it('displays a loading screen then a list of characters', () => {
     render(<CharacterPage />);
+
+    screen.getByAltText('loading');
   });
 });
