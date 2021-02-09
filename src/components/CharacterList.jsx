@@ -12,6 +12,13 @@ const CharacterList = ({ characters }) => {
     </li>
   ));
 
+  return (
+    <ul data-testid="characters">
+      {characterElements}
+    </ul>
+  );
+};
+
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
