@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CharacterPage from '../../containers/CharacterPages';
 
 
 export default function App() {
@@ -7,7 +8,7 @@ export default function App() {
     <>
       <Router>
         <Switch>
-          <Route exact path="/" component="" />
+          <Route exact path="/" component={CharacterPage} />
         </Switch>
       </Router>
     </>
