@@ -5,8 +5,8 @@ import Loading from '../components/loading/Loading';
 import { findCharacters } from '../services/RickAndMortyApi';
 
 const CharacterPage = () => {
-  const [loading, setLoading]  = useState;
-  const [characters, setCharacters] = useState;
+  const [loading, setLoading]  = useState(true);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     findCharacters()
@@ -17,6 +17,8 @@ const CharacterPage = () => {
   }, []);
 
   if(loading) return <Loading />;
+
+  return <CharacterList characters={characters} />;
 
 };
 
