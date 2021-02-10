@@ -1,0 +1,17 @@
+// import React from 'react';
+// import { render, screen, waitFor, fireEvent } from '@testing-library/react';
+// import PagingButton from './pagingButton';
+
+// describe('PagingButton component', () => {
+//   it('changes page number onClick', () => {
+//     render(<PagingButton />);
+
+//     const nextButton = screen.getByText('Next');
+//     const pageNumber = screen.getByText('Page 1');
+//     fireEvent.click(nextButton);
+
+//     return waitFor(() => {
+//       expect(pageNumber).toHaveTextContent('2');
+//     });
+//   });
+// });

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const pagingButton  = ({ page, setPage }) => {
+const PagingButton  = ({ page, setPage }) => {
   const handleIncrement = () => setPage(page + 1);
   const handleDecrement = () => setPage(page - 1);
 
@@ -11,13 +11,13 @@ const pagingButton  = ({ page, setPage }) => {
         page === 1
           ?
           <>
-            <span>page {page}</span>
+            <span>Page {page}</span>
             <button onClick={handleIncrement}>Next</button>
           </>
           :
           <>
             <button onClick={handleDecrement}>Prev</button>
-            <span>page {page}</span>
+            <span>Page {page}</span>
             <button onClick={handleIncrement}>Next</button>
           </>
       }
@@ -25,9 +25,9 @@ const pagingButton  = ({ page, setPage }) => {
   );
 };
 
-pagingButton.propTypes = {
+PagingButton.propTypes = {
   page: PropTypes.number,
   setPage: PropTypes.func
 };
 
-export default pagingButton;
+export default PagingButton;
