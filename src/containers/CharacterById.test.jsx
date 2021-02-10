@@ -7,5 +7,11 @@ describe('CharacterById container', () => {
     render(<CharacterById />);
 
     screen.getByAltText('loading');
+
+    return waitFor(() => {
+      screen.getByText('Morty Smith');
+      screen.getByText('Human');
+      screen.getByText('Alive');
+    });
   });
 });
