@@ -8,6 +8,6 @@ describe('CharacterPages container', () => {
 
     screen.getByAltText('loading');
 
-    const listOfCharacters = await screen.findByTestId('characters')
+    const listOfCharacters = await screen.findByTestId('characters');
   });
 });
