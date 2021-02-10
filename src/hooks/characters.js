@@ -20,5 +20,11 @@ export const useCharacters = () => {
 };
 
 export const useCharacterById = id => {
+  const [loading, setLoading] = useState(true);
+  const [character, setCharacter] = useState(null);
 
+  return {
+    loading,
+    character
+  };
 };
