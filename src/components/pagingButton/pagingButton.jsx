@@ -29,3 +29,5 @@ pagingButton.propTypes = {
   page: PropTypes.number,
   setPage: PropTypes.func
 };
+
+export default pagingButton;
