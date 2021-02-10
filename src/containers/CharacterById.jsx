@@ -6,6 +6,7 @@ import Loading from '../components/loading/Loading';
 export default class CharacterById extends Component {
   state = {
     loading: true,
+    character: null
   }
 
   componentDidMount() {
@@ -15,14 +16,9 @@ export default class CharacterById extends Component {
   }
 
   render() {
-    const { loading } = this.state;
+    const { loading, character } = this.state;
 
     if(loading) return <Loading />;
-    return <CharacterDetail 
-      name="Morty Smith"
-      image="morty.url"
-      status="Alive"
-      species="Human"
-    />;
+    return <CharacterDetail {...character} />;
   }
 }
