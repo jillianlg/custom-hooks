@@ -5,11 +5,12 @@ import Loading from '../components/loading/Loading';
 import { useCharacters } from '../hooks/characters';
 
 const CharacterPage = () => {
-  const { loading, characters } = useCharacters();
+  const { loading, characters, page, setPage } = useCharacters();
 
   if(loading) return <Loading />;
 
   return <CharacterList characters={characters} />;
+
 
 };
 
