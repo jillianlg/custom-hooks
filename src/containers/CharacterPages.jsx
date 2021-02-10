@@ -22,29 +22,4 @@ const CharacterPage = () => {
 
 };
 
-
 export default CharacterPage;
-
-// export default class CharacterPage extends Component {
-//   state = {
-//     loading: true,
-//     characters: []
-//   }
-
-//   componentDidMount() {
-//     findCharacters()
-//       .then(characters => {
-//         this.setState({ characters, loading: false });
-//       });
-//   }
-
-//   render() {
-//     const { loading, characters } = this.state;
-
-//     if(loading) return <Loading />;
-//     return (
-//       <CharacterList characters={characters} />
-//     );
-//   }
-
-// }
