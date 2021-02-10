@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
+import Loading from '../components/loading/Loading';
 
 export default class CharacterById extends Component {
   state = {
@@ -9,8 +10,7 @@ export default class CharacterById extends Component {
   render() {
     const { loading } = this.state;
 
-    if(loading) return <img src="https://media.giphy.com/media/cLqtYAKCLI41ArIC48/giphy.gif" alt="loading" />;
+    if(loading) return <Loading />;
     return <h1>Details Page</h1>;
-   
   }
 }
