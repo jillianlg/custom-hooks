@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { findCharacters } from '../services/RickAndMortyApi';
+import { findCharacterById, findCharacters } from '../services/RickAndMortyApi';
 
 export const useCharacters = () => {
   const [loading, setLoading]  = useState(true);
@@ -22,6 +22,14 @@ export const useCharacters = () => {
 export const useCharacterById = id => {
   const [loading, setLoading] = useState(true);
   const [character, setCharacter] = useState(null);
+
+  useEffect(() => {
+    findCharacterById(id)
+      .then(character => {
+        setCharacter(character);
+        setLoading(false);
+      });
+  }, []);
 
   return {
     loading,
