@@ -3,11 +3,12 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
+import charactersApiResponse from '../fixtures/characters.json';
 import CharacterPage from './CharacterPages';
 
 const server = setupServer(
   rest.get('https://rickandmortyapi.com/api/character', (req, res, ctx) => {
-    return res(ctx.json());
+    return res(ctx.json(charactersApiResponse));
   })
 );
 
