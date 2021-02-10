@@ -9,6 +9,7 @@ export default function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={CharacterPage} />
+          <Route exact path="/characters/:id" component={CharacterById} />
         </Switch>
       </Router>
     </>
