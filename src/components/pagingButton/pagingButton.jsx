@@ -7,9 +7,21 @@ const pagingButton  = ({ page, setPage }) => {
 
   return (
     <div>
-      <button onClick={handleDecrement}>Prev</button>
-      <span>page {page}</span>
-      <button onClick={handleIncrement}>Next</button>
+      { 
+        page === 1
+          ?
+          <>
+            <span>page {page}</span>
+            <button onClick={handleIncrement}>Next</button>
+          </>
+          :
+          <>
+            <button onClick={handleDecrement}>Prev</button>
+            <span>page {page}</span>
+            <button onClick={handleIncrement}>Next</button>
+          </>
+      }
+      
     </div>
   );
 };
