@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
-import characterByIdResponse from '../fixtures/characterById.json';
+import characterByIdResponse from '../fixtures/CharacterById.json';
 import CharacterById from './CharacterById';
 
 const server = setupServer(
