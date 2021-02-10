@@ -3,8 +3,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import CharacterById from './CharacterById';
 
 describe('CharacterById container', () => {
-  it('fetches and displays a list of character details', () => {
-    render(<CharacterById />);
+  it('fetches and displays a list of character details', async() => {
+    render(<CharacterById match={{ params: { id: '2' } }}/>);
 
     screen.getByAltText('loading');
 
