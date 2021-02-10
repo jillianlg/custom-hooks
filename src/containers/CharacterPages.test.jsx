@@ -13,6 +13,9 @@ const server = setupServer(
 );
 
 describe('CharacterPages container', () => {
+  beforeAll(() => server.listen());
+  afterAll(() => server.close());
+  
   it('displays a loading screen then a list of characters', async() => {
     render(
       <MemoryRouter>
