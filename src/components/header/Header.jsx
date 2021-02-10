@@ -1,11 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default class Header extends React.Component {
-  render() {
-    return (
-      <>
-        <h1>Rick and Morty</h1>
-      </>
-    );
-  }
+function Header() {
+  return (
+    <div>
+      <h2>Rick and Morty</h2>   
+      <Link to="/">
+        <p>Home</p>
+      </Link>
+    </div>
+  );
 }
+
+export default Header;
