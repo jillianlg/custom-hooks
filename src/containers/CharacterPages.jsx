@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
-import CharacterList from '../components/CharacterList';
+import CharacterList from '../components/characters/CharacterList';
+
 import Loading from '../components/loading/Loading';
 import { findCharacters } from '../services/RickAndMortyApi';
 
@@ -13,7 +14,7 @@ export default class CharacterPage extends Component {
   componentDidMount() {
     findCharacters()
       .then(characters => {
-        this.setState({ characters, loading: false })
+        this.setState({ characters, loading: false });
       });
   }
 

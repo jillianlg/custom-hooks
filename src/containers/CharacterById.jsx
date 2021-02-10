@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
+import CharacterDetail from '../components/details/CharacterDetails';
 import Loading from '../components/loading/Loading';
 
 export default class CharacterById extends Component {
@@ -7,10 +8,21 @@ export default class CharacterById extends Component {
     loading: true,
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 500);
+  }
+
   render() {
     const { loading } = this.state;
 
     if(loading) return <Loading />;
-    return <h1>Details Page</h1>;
+    return <CharacterDetail 
+      name="Morty Smith"
+      image="morty.url"
+      status="Alive"
+      species="Human"
+    />;
   }
 }
