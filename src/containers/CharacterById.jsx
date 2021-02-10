@@ -6,16 +6,16 @@ import Loading from '../components/loading/Loading';
 import { findCharacterById } from '../services/RickAndMortyApi';
 
 const CharacterById = ({ match }) => {
-  const [loading, setLoading] = useState(true);
-  const [character, setCharacter] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // const [character, setCharacter] = useState(null);
 
-  useEffect(() => {
-    findCharacterById(match.params.id)
-      .then(character => {
-        setCharacter(character);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   findCharacterById(match.params.id)
+  //     .then(character => {
+  //       setCharacter(character);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   if(loading) return <Loading />;
   return <CharacterDetail {...character} />;

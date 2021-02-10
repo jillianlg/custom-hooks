@@ -18,3 +18,7 @@ export const useCharacters = () => {
     characters
   };
 };
+
+export const useCharacterById = id => {
+
+};
