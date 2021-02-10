@@ -4,7 +4,7 @@ import CharacterDetail from './CharacterDetails';
 
 describe('CharacterDetails component', () => {
   afterEach(() => cleanup());
-  it('renders Queen data by id', () => {
+  it('renders character data by id', () => {
     const { asFragment } = render(
       <CharacterDetail
         name="Morty Smith"
