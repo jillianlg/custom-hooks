@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterDetail from '../components/details/CharacterDetails';
 import Loading from '../components/loading/Loading';
-import { useCharacterById } from '../hooks/characters';
+import { useCharacterById } from '../state/characters';
 
 const CharacterById = ({ match }) => {
   const { loading, character } = useCharacterById(match.params.id);
