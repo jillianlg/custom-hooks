@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import CharacterList from './CharacterList';
 import { MemoryRouter } from 'react-router-dom';
+import CharacterList from './CharacterList';
 
 describe('CharacterList component', () => {
   afterEach(() => cleanup());
