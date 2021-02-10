@@ -21,7 +21,11 @@ const pagingButton  = ({ page, setPage }) => {
             <button onClick={handleIncrement}>Next</button>
           </>
       }
-      
     </div>
   );
+};
+
+pagingButton.propTypes = {
+  page: PropTypes.number,
+  setPage: PropTypes.func
 };
