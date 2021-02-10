@@ -4,18 +4,21 @@ import { findCharacterById, findCharacters } from '../services/RickAndMortyApi';
 export const useCharacters = () => {
   const [loading, setLoading]  = useState(true);
   const [characters, setCharacters] = useState([]);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
-    findCharacters()
+    findCharacters(page)
       .then(characters => {
         setCharacters(characters);
         setLoading(false);
       });
-  }, []);
+  }, [page]);
 
   return {
     loading,
-    characters
+    characters,
+    page,
+    setPage
   };
 };
 
