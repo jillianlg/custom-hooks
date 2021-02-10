@@ -1,10 +1,15 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import CharacterPage from './CharacterPages';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('CharacterPages container', () => {
   it('displays a loading screen then a list of characters', async() => {
-    render(<CharacterPage />);
+    render(
+      <MemoryRouter>
+        <CharacterPage />
+      </MemoryRouter>
+    );
 
     screen.getByAltText('loading');
 
