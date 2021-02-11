@@ -2,7 +2,9 @@
 
 exports[`Character component renders Character 1`] = `
 <DocumentFragment>
-  <figure>
+  <figure
+    class="character"
+  >
     <img
       alt="Morty Smith"
       src="morty-smith.url"

@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../characters/Characters.css';
 
 const CharacterDetail = ({ image, name, status, species }) => (
-  <figure>
+  <figure className={styles.characterDetails}>
     <img src={image} alt={name} />
     <figcaption>
       <p>{name}</p>

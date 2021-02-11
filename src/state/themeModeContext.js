@@ -6,7 +6,7 @@ export const ThemeModeProvider = ({ children }) => {
   const [themeMode, setThemeMode] = useState('light');
 
   return (
-    <themeModeContext.Provider value={{ themeMode }}>
+    <themeModeContext.Provider value={{ themeMode, setThemeMode }}>
       {children}
     </themeModeContext.Provider>
   );
@@ -15,5 +15,5 @@ export const ThemeModeProvider = ({ children }) => {
 export const useTheme = () => {
   const { themeMode, setThemeMode } = useContext(themeModeContext);
   
-  return themeMode;
+  return { themeMode, setThemeMode };
 };
