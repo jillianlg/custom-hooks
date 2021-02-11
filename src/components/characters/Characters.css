@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 
   .character {
     width: 300px;
@@ -27,8 +30,19 @@
   border-radius: 10px;
 }
 
+.image {
+  height: 300px;
+  width: 212px;
+  margin-top: 5%;
+  object-fit: contain;
+}
+
 .dark{
   background-color: rgb(34, 32, 32);
   color: whitesmoke;
+  border: solid 1pt rgb(34, 32, 32);
   }
 
+.dark figcaption {
+  color: whitesmoke;
+}

@@ -20,7 +20,7 @@ function Header() {
         </Link>
         <div className={styles.toggle}>
           <input type="checkbox" onChange={toggle} />
-          <p>Dark Mode</p>
+          <span>Dark Mode</span>
         </div>
       </div>
     </div>

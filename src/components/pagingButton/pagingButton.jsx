@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './pagingButton.css';
 
 const PagingButton  = ({ page, setPage }) => {
   const handleIncrement = () => setPage(page + 1);
   const handleDecrement = () => setPage(page - 1);
 
   return (
-    <div>
+    <div className={styles.pagingButton}>
       { 
         page === 1
           ?
