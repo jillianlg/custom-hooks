@@ -1,23 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharacterDetails component renders Queen data by id 1`] = `
+exports[`CharacterDetails component renders character data by id 1`] = `
 <DocumentFragment>
-  <figure>
-    <img
-      alt="Morty Smith"
-      src="morty-smith.url"
-    />
-    <figcaption>
-      <p>
-        Morty Smith
-      </p>
-      <p>
-        Alive
-      </p>
-      <p>
-        Human
-      </p>
-    </figcaption>
-  </figure>
+  <div
+    class="light"
+  >
+    <div
+      class="characterDetails"
+    >
+      <img
+        alt="Morty Smith"
+        src="morty-smith.url"
+      />
+      <section>
+        <p>
+          Morty Smith
+        </p>
+        <p>
+          Alive
+        </p>
+        <p>
+          Human
+        </p>
+      </section>
+    </div>
+  </div>
 </DocumentFragment>
 `;
