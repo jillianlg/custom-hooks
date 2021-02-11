@@ -5,6 +5,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import charactersApiResponse from '../fixtures/characters.json';
 import CharacterPage from './CharacterPages';
+import { ThemeModeProvider } from '../state/themeModeContext';
 
 const server = setupServer(
   rest.get('https://rickandmortyapi.com/api/character', (req, res, ctx) => {
@@ -18,9 +19,11 @@ describe('CharacterPages container', () => {
   
   it('displays a loading screen then a list of characters', async() => {
     render(
-      <MemoryRouter>
-        <CharacterPage />
-      </MemoryRouter>
+      <ThemeModeProvider>
+        <MemoryRouter>
+          <CharacterPage />
+        </MemoryRouter>
+      </ThemeModeProvider>
     );
 
     screen.getByAltText('loading');

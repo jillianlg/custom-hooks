@@ -2,24 +2,28 @@
 
 exports[`CharacterDetails component renders character data by id 1`] = `
 <DocumentFragment>
-  <figure
-    class="characterDetails"
+  <div
+    class="light"
   >
-    <img
-      alt="Morty Smith"
-      src="morty-smith.url"
-    />
-    <figcaption>
-      <p>
-        Morty Smith
-      </p>
-      <p>
-        Alive
-      </p>
-      <p>
-        Human
-      </p>
-    </figcaption>
-  </figure>
+    <div
+      class="characterDetails"
+    >
+      <img
+        alt="Morty Smith"
+        src="morty-smith.url"
+      />
+      <section>
+        <p>
+          Morty Smith
+        </p>
+        <p>
+          Alive
+        </p>
+        <p>
+          Human
+        </p>
+      </section>
+    </div>
+  </div>
 </DocumentFragment>
 `;

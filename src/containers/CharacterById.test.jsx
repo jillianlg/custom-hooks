@@ -4,6 +4,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import characterByIdResponse from '../fixtures/CharacterById.json';
 import CharacterById from './CharacterById';
+import { ThemeModeProvider } from '../state/themeModeContext';
 
 const server = setupServer(
   rest.get('https://rickandmortyapi.com/api/character/2', (req, res, ctx) => {
@@ -16,7 +17,10 @@ describe('CharacterById container', () => {
   afterAll(() => server.close());
 
   it('fetches and displays a characters details', async() => {
-    render(<CharacterById match={{ params: { id: '2' } }} />);
+    render(
+      <ThemeModeProvider>
+        <CharacterById match={{ params: { id: '2' } }} />
+      </ThemeModeProvider>);
 
     screen.getByAltText('loading');
     
